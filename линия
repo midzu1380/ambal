@@ -1,0 +1,87 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
+
+int main() {
+	system("color 05");
+	setlocale(0, "");
+
+	cout << "[1]Программа -Геометрические фигуры\n\n";
+	cout << "[+] ВЫберите фигуру: \n";
+	cout << "[1] Линия\n";
+
+	int menu;
+	cin >> menu;
+
+	switch (menu) {
+	case 1:
+		system("cls");
+		system("color 06");
+		cout << "[+] Фигура: Линия\n\n";
+		cout << "[1] Горизонтальная\n";
+		cout << "[2] Вертикальная\n\n";
+		cout << "[+] Выберити тип: \n";
+
+
+		int lin;
+		cin >> lin;
+		switch (lin) {
+		case 1: {
+			system("color 0B");
+			system("cls");
+			cout << "[+] Вы выбрали горизантальный тип\n\n";
+			cout << "[+] Длина линии: \n";
+			int num;
+			cin >> num;
+			system("cls");
+			cout << "[+] Текстура линии: \n";
+			char tex;
+			cin >> tex;
+			system("cls");
+			int a = 1;
+			system("cls");
+			while (a <= num) {
+				cout << tex;
+				a++;
+			}
+			break;
+		}
+		case 2: {
+			system("color 0B");
+			system("cls");
+			cout << "[+] Вы выбрали вертикальный тип\n\n";
+			cout << "[+] Длина линии: \n";
+			int num;
+			cin >> num;
+			system("cls");
+			cout << "[+] Текстура линии: \n";
+			char tex;
+			cin >> tex;
+			system("cls");
+			int a = 1;
+			system("cls");
+			while (a <= num) {
+				cout << tex << endl;
+				a++;
+			}
+			break;
+		}
+		default:
+			system("cls");
+			cout << "don't unedestend";
+			Sleep(3000);
+			system("cls");
+			main();
+			break;
+		}
+	default:
+		system("cls");
+		cout << "don't unedestend";
+		Sleep(3000);
+		system("cls");
+		main();
+		break;
+	}
+	return 0;
+}
+
