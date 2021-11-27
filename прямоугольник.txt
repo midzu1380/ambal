@@ -1,0 +1,279 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	cout << "[+]Программа \"Геометрические Фигруры\"\n";
+	cout << "[1]Линия\n";
+	cout << "[2]Квадрат\n";
+	cout << "[3]Прямоугольник\n";
+	cout << "[4]Треугольник\n";
+	cout << "[5]Крестик\n";
+	cout << "[+]Выберите фигуру: ";
+	int vibor;
+	cin >> vibor;
+	switch (vibor) {
+	case 1: {
+		system("cls");
+		cout << "[-]Фигура: Линия\n";
+		cout << "[1]Горизонтальная\n";
+		cout << "[2]Вертикальная\n";
+		cout << "[-]Выберите тип: \n";
+		int lin;
+		cin >> lin;
+		switch (lin) {
+		case 1: {
+			system("cls");
+			int  nam;
+			cout << "Длина линии: ";
+			cin >> nam;
+			system("cls");
+			char tex;
+			cout << "Текстура линии: ";
+			cin >> tex;
+			int i = 0;
+			system("cls");
+			while (i < nam) {
+				cout << tex;
+				i++;
+			}
+			break;
+		}
+		case 2: {
+			system("cls");
+			int  nam;
+			cout << "Длина линии: ";
+			cin >> nam;
+			system("cls");
+			char tex;
+			cout << "Текстура линии: ";
+			cin >> tex;
+			int i = 0;
+			system("cls");
+			while (i < nam) {
+				cout << tex << endl;
+				i++;
+			}
+			break;
+		}
+		default:
+			cout << "ошибка";
+			break;
+		}
+		break;
+	}
+	case 2: {
+		system("cls");
+		cout << "[-]Фигура: Квадрат\n";
+		cout << "[1]Заполненый квадрат\n";
+		cout << "[2]Пустой квадрат\n";
+		cout << "[-]Выберите тип: ";
+		int lin;
+		cin >> lin;
+		switch (lin) {
+		case 1: {
+			system("cls");
+			int  nam;
+			cout << "Размер квадрата: ";
+			cin >> nam;
+			system("cls");
+			char tex;
+			cout << "Текстура квадрата: ";
+			cin >> tex;
+			system("cls");
+			for (int x = 0; x < nam; x++) {
+				for (int y = 0; y < nam; y++) {
+					cout << tex << " ";
+				}
+				cout << "\n";
+			}
+			break;
+		}
+		case 2: {
+			system("cls");
+			int  nam;
+			cout << "Размер квадрата: ";
+			cin >> nam;
+			system("cls");
+			char tex;
+			cout << "Текстура квадрата: ";
+			cin >> tex;
+			system("cls");
+			for (int y = 0; y < nam; y++) {
+				Sleep(20);
+				for (int x = 0; x < nam; x++) {
+					if (y == 0 || y == nam - 1 || x == 0 || x == nam - 1) {
+						cout << tex << " ";
+					}
+					else {
+						cout << "  ";
+					}
+				}
+				cout << "\n";
+			}
+
+
+			break;
+		}
+		default:
+			cout << "ошибка";
+			break;
+		}
+		break;
+	}
+	case 3: {
+		system("cls");
+		cout << "[-]Фигура: Прямоугольник\n";
+		cout << "[1]Заполненый прямоугольник\n";
+		cout << "[2]Пустой прямоугольник\n";
+		cout << "[-]Выберите тип: ";
+		int lin;
+		cin >> lin;
+		switch (lin) {
+		case 1: {
+			system("cls");
+			int  nam;
+			cout << "Высота прямоугольника: ";
+			cin >> nam;
+			system("cls");
+			int  nam1;
+			cout << "Ширина прямоугольника: ";
+			cin >> nam1;
+			system("cls");
+			char tex;
+			cout << "Текстура прямоугольника: ";
+			cin >> tex;
+			system("cls");
+			for (int y = 0; y < nam; y++) {
+				for (int x = 0; x < nam1; x++) {
+					cout << tex << " ";
+				}
+				cout << "\n";
+			}
+			break;
+		}
+		case 2: {
+			system("cls");
+			int  nam;
+			cout << "Высота прямоугольника: ";
+			cin >> nam;
+			system("cls");
+			int  nam1;
+			cout << "Ширина прямоугольника: ";
+			cin >> nam1;
+			system("cls");
+			char tex;
+			cout << "Текстура прямоугольника: ";
+			cin >> tex;
+			system("cls");
+			for (int y = 0; y < nam; y++) {
+				Sleep(20);
+				for (int x = 0; x < nam1; x++) {
+					if (y == 0 || y == nam - 1 || x == 0 || x == nam1 - 1) {
+						cout << tex << " ";
+					}
+					else {
+						cout << "  ";
+					}
+				}
+				cout << "\n";
+			}
+
+
+			break;
+		}
+		default:
+			cout << "ошибка";
+			break;
+		}
+		break;
+	}
+	case 4:
+		system("cls");
+		cout << "[-]Фигура: Треугольник\n";
+		cout << "[1]Пустой Треугольник\n";
+
+		cout << "[-]Выберите тип: ";
+		int treyg;
+		cin >> treyg;
+		switch (treyg) {
+		case 1:
+			system("cls");
+			int  size;
+			cout << "Размер Треугольника: ";
+			cin >> size;
+			system("cls");
+			char tex;
+			cout << "Текстура Треугольника: ";
+			cin >> tex;
+			system("cls");
+			for (int y = 0; y < size; y++) {
+				for (int x = 0; x < size; x++) {
+					if (x == (size / 2) + y || x == (size / 2) - y || y == size / 2) {
+						cout << tex << " ";
+					}
+					else {
+						cout << " .";
+					}
+				}
+				cout << endl;
+			}
+			Sleep(40);
+			break;
+		default:
+			break;
+		}
+	case 5:
+		system("cls");
+		int  size;
+		cout << "Вы выбрали фигуру Крестик\n";
+		cout << "Размер Крестика: ";
+		cin >> size;
+		system("cls");
+		char tex;
+		cout << "Текстура Крестика: ";
+		cin >> tex;
+		system("cls");
+		for (int y = 0; y < size; y++) {
+			cout << "\t";
+			for (int x = 0; x < size; x++) {
+				if (x == y && y != 0 || x == size - y) {
+					cout << tex << " ";
+				}
+				else {
+					cout << " .";
+				}
+			}
+			cout << "\n";
+		}
+		break;
+	case 6:
+		system("cls");
+		cout << "Вы выбрали фигуру Плюсик\n";
+		int  size;
+		cout << "Размер (нечетные числа)\n";
+		cout << "Размер Плюсика: ";
+		cin >> size;
+		system("cls");
+		char tex;
+		cout << "Текстура Плюсика: ";
+		cin >> tex;
+		system("cls");
+		for (int y = 0; y < size; y++) {
+			for (int x = 0; x < size; x++) {
+				if (y == size/2 || x == size/2) {
+					cout << tex << " ";
+				}
+				else {
+					cout << " .";
+				}
+			}
+			cout << "\n";
+		}
+		break;
+	default:
+		cout << "Нет такой фигуры";
+		break;
+	}
+	return 0;
+}
