@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+
+	
+	cout << "[1] Январь " << endl;
+	cout << "[2] Февраль " << endl;
+	cout << "[3] Март " << endl;
+	cout << "[4] Апрель " << endl;
+	cout << "[5] Май " << endl;
+	cout << "[6] Июнь " << endl;
+	cout << "[7] Июль " << endl;
+	cout << "[8] Август " << endl;
+	cout << "[9] Сентябрь " << endl;
+	cout << "[10] Октябрь " << endl;
+	cout << "[11] Ноябрь " << endl;
+	cout << "[12] Декабрь " << endl << endl;
+	cout << "[-] Введите значение: ";
+	
+	int value;
+	cin >> value;
+
+	switch (value) {
+
+	case 1:
+		cout << "Январь - самый холодный месяц года ";
+		break;
+	case 2:
+		cout << "Февраль - самый короткий месяц года ";
+		break;
+	case 3:
+		cout << "Март - первый месяц весны ";
+		break;
+	case 4:
+		cout << "Апрель - второй месяц весны ";
+		break;
+	case 5:
+		cout << "Май - цветет черемуха ";
+		break;
+	case 6:
+		cout << "Июнь - первый месяц лета ";
+		break;
+	case 7:
+		cout << "Июль - у Пашка др))) ";
+		break;
+	case 8:
+		cout << "Август - скоро учеба(( ";
+		break;
+	case 9:
+		cout << "Сентябрь - горит ";
+		break;
+	case 10:
+		cout << "Октябрь - у Миши был др в прошлом месяце ";
+		break;
+	case 11:
+		cout << "Ноябрь - это как октябрь, но на один побольше ";
+		break;
+	case 12:
+		cout << "Декабрь - Новый год через два дня!!! ";
+		break;
+	default:
+		cout << "Нет такого значения ";
+		break;
+		
+	}
+
+	return 0;
+}
